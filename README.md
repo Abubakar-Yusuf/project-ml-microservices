@@ -1,4 +1,4 @@
-[![segzonbravo](https://circleci.com/gh/segzonbravo/project-ml-micriservices-kubernetes.svg?style=svg)](https://app.circleci.com/pipelines/github/segzonbravo/project-ml-micriservices-kubernetes)
+[![segzonbravo](https://circleci.com/gh/segzonbravo/project-ml-micriservices.svg?style=svg)](https://app.circleci.com/pipelines/github/segzonbravo/project-ml-micriservices)
 
 ## Project Overview
 
