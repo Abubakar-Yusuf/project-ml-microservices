@@ -39,13 +39,15 @@ source .devops/bin/activate
 ### Running `app.py`
 
 1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+2. Run in Docker:  `./run_docker.sh` `chmod +x run_docker.sh` ./`run_docker.sh`
+3. Run in Kubernetes:  `./run_kubernetes.sh` `chmod +x run_kubernetes.sh` `./run_kubernetes.sh`
 
 ### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
+* Setup and Configure Docker locally using: docker build --tag=microproject .
+* Setup and Configure Kubernetes locally: use eksctl to create k8s cluster eksctl create cluster --region=us-east-1 --name=cluster-name
 * Create Flask app in Container
-* Run via kubectl
-# ml_project
+* Run via kubectl: kubectl run microproject --image=segzonbravo/microproject:v1
+To get more info about the pod use: kubectl get pods
+Expose the app to Port thus Port forwarding, use: kubectl port-forward pod/NAME --address 0.0.0.0 PORT:PORT
+
